@@ -39,4 +39,5 @@ This project aims to analyze my Sudoku playing performance over time. By collect
 4. Regularly update the GitHub repository with findings and code.  
 
 
-# Project Repository: 
+# Project Repository: [Sudoku Performance Analysis](https://github.com/bbenduylu/sudoku-performance-analysis)
+
