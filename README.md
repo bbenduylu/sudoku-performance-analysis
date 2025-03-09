@@ -31,10 +31,13 @@ Date,Easy Games,Easy Win Rate,Easy Perfect Wins,Easy Fastest Time,Easy Average T
 - Difficulty Level Comparison: Comparing performance between Easy and Hard games to evaluate the impact of difficulty level.
 
 ###  **Next Steps**  
-1. Start recording daily Sudoku statistics separately for Easy and Hard levels.  
-2. Store data in a structured CSV file.  
-3. Begin initial exploratory data analysis (EDA) using Python.  
-4. Regularly update the GitHub repository with findings and code.  
+1. Collect Data: Record daily statistics separately for Easy and Hard levels.
+2. Store Data: Maintain a structured CSV file for consistency. 
+3. Clean & Process Data: Ensure correct formatting and handle missing values.  
+4. Perform Exploratory Data Analysis (EDA) using Python to generate insights.
+5. Compare Performance: Analyze trends in win rates, completion times, and streaks.
+6. Update Repository: Regularly commit new data and analysis scripts to GitHub.
+7. Summarize Findings: Create reports or visualizations to showcase key insights.
 
 ---
  **Project Repository:** [Your GitHub Repo Link]
