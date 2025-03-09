@@ -14,10 +14,10 @@ This project aims to analyze my Sudoku playing performance over time. By collect
   - Average completion time (Easy & Hard)  
   - Winning streaks (Easy & Hard)  
 
-###  **Data Collection Plan**  
-- Data will be recorded daily in a **CSV file**. Below is the sample CSV format:    
-- Sample data format:  
-````csv
+## Data Collection Plan  
+Data will be recorded daily in a **CSV file**. Below is the sample CSV format:  
+
+```csv
 Date,Easy Games,Easy Win Rate,Easy Perfect Wins,Easy Fastest Time,Easy Average Time,Easy Winning Streak,Hard Games,Hard Win Rate,Hard Perfect Wins,Hard Fastest Time,Hard Average Time,Hard Winning Streak
 2025-03-10,4,90,3,3.2,4.5,5,2,70,1,5.8,7.3,2
 2025-03-11,5,85,2,3.0,4.8,4,3,65,1,6.2,8.0,1
