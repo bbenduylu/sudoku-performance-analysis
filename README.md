@@ -38,9 +38,13 @@ We found minimal missing data and filled missing values using mean imputation fo
 
 ### 3. Distribution and Visualization
 Histograms were used to visualize the distribution of win rates and completion times.
+![Distribution of Easy Win Rates](visuals/screenshot/histogram_easy.png)
+![Distribution of Hard Win Rates](visuals/screenshot/histogram_hard.png)
 
 ### 4. Identifying Outliers
 Boxplots were created to check for any potential outliers in the data.
+![Hard Average Completion Time](visuals/screenshot/outlier_hard.png)
+
 
 ### 5. Correlations Between Variables
 A correlation matrix was used to check how completion time and win rate are related.
