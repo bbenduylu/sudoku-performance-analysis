@@ -1,12 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import scipy.stats import ttest_ind, linregress, pearsonr
+from scipy.stats import ttest_ind, linregress, pearsonr
 
 df= pd.read_csv("../data/sudoku_performance.csv")
 df["Gün"] = range(1, len(df)+1)
 
 def zamanduzelt(t):
-  dk, sn = map(int, t_str.split(":"))
+  dk, sn = map(int, t.split(":"))
   return dk + sn/60
 
 df["Kolay Süre"]= df["Kolay Ortalama Tamamlama Süresi (dakika)"].apply(zamanduzelt)
@@ -36,7 +36,7 @@ slope_hard,intercept_hard, r_value_hard,p_value_hard, std_err_hard= linregress(d
 
 print("\nHypothesis 2 - Trend Analysis of Win Rates Over Time")
 
-print("Easy Level → slope: "+ str(round(slope_easy,3) +" → p-value: "+ str(round(p_value_easy, 5))))
+print("Easy Level → slope: "+ str(round(slope_easy,3)) +" → p-value: "+ str(round(p_value_easy, 5)))
 if p_value_easy < 0.05:
     print("Conclusion (Easy): There is a statistically significant increasing trend in win rate over time.")
 else:
@@ -66,7 +66,3 @@ if p_hard < 0.05:
     print("Conclusion (Hard): There is a statistically significant relationship between completion time and win rate.")
 else:
     print("Conclusion (Hard): No significant relationship detected.")
-
-
-
-
