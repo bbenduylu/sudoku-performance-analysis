@@ -1,11 +1,13 @@
 # Sudoku Performance Analysis
 This project analyzes the performance of Sudoku games played by the user, focusing on completion time, win rates, and the difficulty levels. The goal is to understand how the player's win rate varies across different difficulty levels and over time, as well as the relationship between the time spent completing the puzzle and the win rate.
 
+
 ## Project Objective
 The objective of this project is to:
 - Analyze the win rates and completion times for easy and hard Sudoku puzzles.
 - Investigate whether there is a correlation between time spent on a puzzle and the success rate.
 - Examine how win rates change over time.
+
 
 ## Data Source  
 - The data will be manually recorded from a Sudoku mobile application. Each day, data will be collected separately for **Easy and Hard** difficulty levels. The key metrics that will be tracked are:  
@@ -16,6 +18,7 @@ The objective of this project is to:
   - Average completion time (Easy & Hard)  
   - Winning streaks (Easy & Hard)  
 
+
 ## Data Collection Plan  
 Data will be recorded daily in a **CSV file**. Below is the sample data:  
 
@@ -23,6 +26,7 @@ Data will be recorded daily in a **CSV file**. Below is the sample data:
 |------------|------------|---------------|--------------------|-------------------|-------------------|---------------------|------------|---------------|--------------------|-------------------|-------------------|---------------------|
 | 2025-03-10 | 4          | 90%           | 3                  | 3.2               | 4.5               | 5                   | 2          | 70%           | 1                  | 5.8               | 7.3               | 2                   |
 | 2025-03-11 | 5          | 85%           | 2                  | 3.0               | 4.8               | 4                   | 3          | 65%           | 1                  | 6.2               | 8.0               | 1                   |
+
 
 ## Exploratory Data Analysis (EDA)
 
@@ -37,23 +41,13 @@ I checked the basic statistics and the data types to understand the distribution
 We found minimal missing data and filled missing values using mean imputation for the columns with sparse missing data.
 
 ### 3. Distribution and Visualization
-Histograms were used to visualize the distribution of win rates and completion times.
+Histograms were used to visualize the distribution of win rates and completion times. 
 ![Distribution of Easy Win Rates](visuals/screenshot/histogram_easy.png)
 ![Distribution of Hard Win Rates](visuals/screenshot/histogram_hard.png)
 
 ### 4. Identifying Outliers
-Boxplots were created to check for any potential outliers in the data.
+Boxplots were created to check for any potential outliers in the data. An outlier is found from hard average completion time data.
 ![Hard Average Completion Time](visuals/screenshot/outlier_hard.png)
-
-
-### 5. Correlations Between Variables
-A correlation matrix was used to check how completion time and win rate are related.
-
-### 6. Time-based Analysis
-Time series analysis was performed to check if win rates improved over time.
-
-### 7. Summary of Findings
-The EDA helped identify key patterns, handle missing data, and prepare the dataset for further hypothesis testing.
 
 
 ## Hypothesis 1 - Easy vs Hard Win Rate Comparison
@@ -130,6 +124,7 @@ Pearson correlation was calculated to analyze the relationship between completio
 **Completion Time vs Win Rate Correlation:**
 
 ![Completion Time vs Win Rate](visuals/screenshot/scatter_plot.png)
+
 
 ## Results and Discussion
 
