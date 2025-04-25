@@ -36,5 +36,5 @@ To test whether there is a statistically significant difference in win rates bet
 
 **Bar Chart Comparing Easy vs Hard Win Rates:**
 
-![Win Rate Comparison](visualizations/screenshots/bar_chart.png)
+![Win Rate Comparison](visuals/screenshot/bar_chart.png)
 
