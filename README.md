@@ -38,3 +38,18 @@ To test whether there is a statistically significant difference in win rates bet
 
 ![Win Rate Comparison](visuals/screenshot/bar_chart.png)
 
+
+### Hypothesis 2 - Win Rate Over Time
+
+This hypothesis tests if the win rate improves over time for both easy and hard puzzles. A linear regression model was used to examine the trend in win rates over time.
+
+**H₀:** There is no trend in win rate over time.
+**H₁:** There is a positive trend in win rate over time.
+
+### Visualization:
+
+**Win Rate Trend Over Time:**
+
+![Win Rate Trend](visualizations/screenshots/trend_plot.png)
+
+
