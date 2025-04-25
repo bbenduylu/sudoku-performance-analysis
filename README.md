@@ -29,8 +29,8 @@ Data will be recorded daily in a **CSV file**. Below is the sample data:
 
 To test whether there is a statistically significant difference in win rates between easy and hard Sudoku puzzles, an independent t-test was conducted.
 
-**H₀:** The mean win rates for easy and hard puzzles are equal.
-**H₁:** The mean win rates for easy and hard puzzles are different.
+- **H₀:** The mean win rates for easy and hard puzzles are equal.
+- **H₁:** The mean win rates for easy and hard puzzles are different.
 
 ### Method:
 An independent **t-test** was performed to compare the win rates of easy and hard puzzles. The t-statistic and p-value were calculated to test whether the difference in win rates was statistically significant.
@@ -51,8 +51,8 @@ Since the p-value is much smaller than the significance level of 0.05, we reject
 
 This hypothesis tests if the win rate improves over time for both easy and hard puzzles. A linear regression model was used to examine the trend in win rates over time.
 
-**H₀:** There is no trend in win rate over time.
-**H₁:** There is a positive trend in win rate over time.
+- **H₀:** There is no trend in win rate over time.
+- **H₁:** There is a positive trend in win rate over time.
 
 ### Method:
 Linear regression was performed to test if there is a significant trend in win rates over time for both easy and hard levels. The **slope** and **p-value** were used to determine the strength and significance of the trend.
