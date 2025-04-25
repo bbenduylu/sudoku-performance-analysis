@@ -24,9 +24,34 @@ Data will be recorded daily in a **CSV file**. Below is the sample data:
 | 2025-03-10 | 4          | 90%           | 3                  | 3.2               | 4.5               | 5                   | 2          | 70%           | 1                  | 5.8               | 7.3               | 2                   |
 | 2025-03-11 | 5          | 85%           | 2                  | 3.0               | 4.8               | 4                   | 3          | 65%           | 1                  | 6.2               | 8.0               | 1                   |
 
-## Data Cleaning and Organization
-- **Mean Imputation**: For missing data that was sparse and not expected to have a significant impact on overall data, I filled in the missing values with the average of the respective column. The mean imputation were carefully selected to avoid introducing bias into the dataset. By using mean imputation, the central tendency of data is preserved.
-- **Handling Duplicates**: Duplicate rows were removed to prevent over-representation of certain entries and maintain the integrity of the data.
+## Exploratory Data Analysis (EDA)
+
+Before performing any hypothesis testing, an exploratory data analysis (EDA) was performed to better understand the dataset's structure and key characteristics. EDA helps in identifying patterns, detecting anomalies, and ensuring the integrity of the data. Here’s wh<img width="1440" alt="Screenshot 2025-04-25 at 21 27 04" src="https://github.com/user-attachments/assets/34364218-f416-47ee-b5e8-da9f078cf538" />
+at was done:
+
+### 1. General Overview of the Data
+We checked the basic statistics and the data types to understand the distribution of variables:
+- Shape: Number of rows and columns
+- Summary statistics like mean, standard deviation, and percentiles.
+
+### 2. Handling Missing Data
+We found minimal missing data and filled missing values using mean imputation for the columns with sparse missing data.
+
+### 3. Distribution and Visualization
+Histograms were used to visualize the distribution of win rates and completion times.
+
+### 4. Identifying Outliers
+Boxplots were created to check for any potential outliers in the data.
+
+### 5. Correlations Between Variables
+A correlation matrix was used to check how completion time and win rate are related.
+
+### 6. Time-based Analysis
+Time series analysis was performed to check if win rates improved over time.
+
+### 7. Summary of Findings
+The EDA helped identify key patterns, handle missing data, and prepare the dataset for further hypothesis testing.
+
 
 ## Hypothesis 1 - Easy vs Hard Win Rate Comparison
 
