@@ -32,24 +32,84 @@ To test whether there is a statistically significant difference in win rates bet
 **H₀:** The mean win rates for easy and hard puzzles are equal.
 **H₁:** The mean win rates for easy and hard puzzles are different.
 
-### Visualization:
+#### Method:
+An independent **t-test** was performed to compare the win rates of easy and hard puzzles. The t-statistic and p-value were calculated to test whether the difference in win rates was statistically significant.
+
+#### Result:
+- **t-statistic**: 31.959
+- **p-value**: 0.0
+Since the p-value is much smaller than the significance level of 0.05, we reject the null hypothesis. Therefore, we conclude that there is a statistically significant difference between the win rates of easy and hard puzzles.
+
+#### Visualization:
 
 **Bar Chart Comparing Easy vs Hard Win Rates:**
 
 ![Win Rate Comparison](visuals/screenshot/bar_chart.png)
 
 
-### Hypothesis 2 - Win Rate Over Time
+### Hypothesis 2 - Trend Analysis of Win Rates Over Time
 
 This hypothesis tests if the win rate improves over time for both easy and hard puzzles. A linear regression model was used to examine the trend in win rates over time.
 
 **H₀:** There is no trend in win rate over time.
 **H₁:** There is a positive trend in win rate over time.
 
-### Visualization:
+#### Method:
+Linear regression was performed to test if there is a significant trend in win rates over time for both easy and hard levels. The **slope** and **p-value** were used to determine the strength and significance of the trend.
+
+#### Result:
+- **Easy Level**:
+    - **Slope**: 0.252
+    - **p-value**: 0.00019
+    - **Conclusion (Easy)**: There is a statistically significant increasing trend in win rate over time.
+  
+- **Hard Level**:
+    - **Slope**: 0.132
+    - **p-value**: 0.04785
+    - **Conclusion (Hard)**: There is a statistically significant increasing trend in win rate over time.
+
+#### Visualization:
 
 **Win Rate Trend Over Time:**
 
-![Win Rate Trend](visualizations/screenshots/trend_plot.png)
+![Win Rate Trend](visuals/screenshot/trend_plot.png)
+
+### Hypothesis 3 - Correlation Between Completion Time and Win Rate
+
+#### Hypothesis:
+- **H₀:** There is no correlation between completion time and win rate.
+- **H₁:** There is a significant correlation between completion time and win rate.
+
+#### Method:
+Pearson correlation was calculated to analyze the relationship between completion time and win rate for both easy and hard puzzles. The **correlation coefficient** and **p-value** were used to assess the strength and significance of the relationship.
+
+#### Result:
+- **Easy Level**:
+    - **Correlation**: -0.225
+    - **p-value**: 0.28006
+    - **Conclusion (Easy)**: No significant relationship detected.
+  
+- **Hard Level**:
+    - **Correlation**: 0.338
+    - **p-value**: 0.09795
+    - **Conclusion (Hard)**: No significant relationship detected.
+
+#### Visualization:
+
+**Completion Time vs Win Rate Correlation:**
+
+![Completion Time vs Win Rate](visuals/screenshot/scatter_plot.png)
+
+## Results and Discussion
+
+- **Hypothesis 1**: The t-test confirmed that there is a statistically significant difference between the win rates of easy and hard puzzles, with the easy puzzles having a higher win rate.
+  
+- **Hypothesis 2**: Both easy and hard puzzles showed a statistically significant increasing trend in win rates over time, suggesting that performance improves over time.
+
+- **Hypothesis 3**: No significant correlation was found between completion time and win rate for both easy and hard levels. The weak negative correlation for easy puzzles and the moderate positive correlation for hard puzzles were not statistically significant.
+
+These findings provide insight into the player's performance over time and across difficulty levels, and suggest that the time spent solving puzzles does not significantly influence the win rate.
+
+
 
 
