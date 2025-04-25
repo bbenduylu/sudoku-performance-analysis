@@ -36,12 +36,15 @@ Before performing any hypothesis testing, an exploratory data analysis (EDA) was
 I checked the basic statistics and the data types to understand the distribution of variables:
 - Shape: Number of rows and columns
 - Summary statistics like mean, standard deviation, and percentiles.
+- These summary statistics helps us to comment at first glance. It is seen that hard sudoku games takes more time than easy games.
+![Statistics of Easy Games](visuals/screenshot/easy_statistics)
+![Statistics of Hard Games](visuals/screenshot/hard_statistics)
 
 ### 2. Handling Missing Data
 We found minimal missing data and filled missing values using mean imputation for the columns with sparse missing data.
 
 ### 3. Distribution and Visualization
-Histograms were used to visualize the distribution of win rates and completion times. 
+Histograms were used to visualize the distribution of win rates and completion times. Both win rate histograms give valuable insight into the difficulty levels. The easy puzzle distribution being narrow shows consistency in performance, while the hard puzzle distribution's spread shows the challenge they present.
 ![Distribution of Easy Win Rates](visuals/screenshot/histogram_easy)
 ![Distribution of Hard Win Rates](visuals/screenshot/histogram_hard)
 
