@@ -38,7 +38,7 @@ An independent **t-test** was performed to compare the win rates of easy and har
 ### Result:
 - **t-statistic**: 31.959
 - **p-value**: 0.0
-Since the p-value is much smaller than the significance level of 0.05, we reject the null hypothesis. Therefore, we conclude that there is a statistically significant difference between the win rates of easy and hard puzzles.
+- **Conclusion**: Since the p-value is much smaller than the significance level of 0.05, we reject the null hypothesis. Therefore, we conclude that there is a statistically significant difference between the win rates of easy and hard puzzles.
 
 ### Visualization:
 
