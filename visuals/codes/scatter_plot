@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
+
+df = pd.read_csv("../../data/sudoku_performance.csv")
+
+plt.figure(figsize=(10, 6))
+plt.scatter(df["Kolay Süre"], df["Kolay Kazanma Oranı (%)"], label="Easy", alpha=0.7)
+plt.scatter(df["Zor Süre"], df["Zor Kazanma Oranı (%)"], label="Hard", alpha=0.7)
+
+plt.title("Completion Time vs Win Rate")
+plt.xlabel("Completion Time (minutes)")
+plt.ylabel("Win Rate (%)")
+plt.legend()
+plt.tight_layout()
+
