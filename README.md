@@ -26,11 +26,10 @@ Data will be recorded daily in a **CSV file**. Below is the sample data:
 
 ## Exploratory Data Analysis (EDA)
 
-Before performing any hypothesis testing, an exploratory data analysis (EDA) was performed to better understand the dataset's structure and key characteristics. EDA helps in identifying patterns, detecting anomalies, and ensuring the integrity of the data. Here’s wh<img width="1440" alt="Screenshot 2025-04-25 at 21 27 04" src="https://github.com/user-attachments/assets/34364218-f416-47ee-b5e8-da9f078cf538" />
-at was done:
+Before performing any hypothesis testing, an exploratory data analysis (EDA) was performed to better understand the dataset's structure and key characteristics. EDA helps in identifying patterns, detecting anomalies, and ensuring the integrity of the data. Here’s what was done:
 
 ### 1. General Overview of the Data
-We checked the basic statistics and the data types to understand the distribution of variables:
+I checked the basic statistics and the data types to understand the distribution of variables:
 - Shape: Number of rows and columns
 - Summary statistics like mean, standard deviation, and percentiles.
 
