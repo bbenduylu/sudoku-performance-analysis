@@ -25,8 +25,8 @@ Data will be recorded daily in a **CSV file**. Below is the sample data:
 | 2025-03-11 | 5          | 85%           | 2                  | 3.0               | 4.8               | 4                   | 3          | 65%           | 1                  | 6.2               | 8.0               | 1                   |
 
 ## Data Cleaning and Organization
-**-Mean Imputation**: For missing data that was sparse and not expected to have a significant impact on overall data, I filled in the missing values with the average of the respective column. The mean imputation were carefully selected to avoid introducing bias into the dataset. By using mean imputation, the central tendency of data is preserved.
-**-Handling Duplicates**: Duplicate rows were removed to prevent over-representation of certain entries and maintain the integrity of the data.
+- **Mean Imputation**: For missing data that was sparse and not expected to have a significant impact on overall data, I filled in the missing values with the average of the respective column. The mean imputation were carefully selected to avoid introducing bias into the dataset. By using mean imputation, the central tendency of data is preserved.
+- **Handling Duplicates**: Duplicate rows were removed to prevent over-representation of certain entries and maintain the integrity of the data.
 
 ## Hypothesis 1 - Easy vs Hard Win Rate Comparison
 
