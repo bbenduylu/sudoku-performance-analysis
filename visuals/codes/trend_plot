@@ -1,0 +1,32 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.stats import linregress
+
+df = pd.read_csv("../../data/sudoku_performance.csv")
+df["Gün"] = range(1, len(df)+1)
+
+#trend line-- easy
+slope_easy,intercept_easy, *_ = linregress(df["Gün"], df["Kolay Kazanma Oranı (%)"])
+df["Kolay Trend"] = slope_easy * df["Gün"] + intercept_easy
+
+#trend line---hard
+slope_hard,intercept_hard,*_ = linregress(df["Gün"], df["Zor Kazanma Oranı (%)"])
+df["Zor Trend"] = slope_hard * df["Gün"] + intercept_hard
+
+
+plt.figure(figsize=(10, 6))
+
+plt.plot(df["Gün"], df["Kolay Kazanma Oranı (%)"], label="Easy Win Rate", marker='o')
+plt.plot(df["Gün"], df["Kolay Trend"], linestyle='--', label="Easy Trend")
+plt.plot(df["Gün"], df["Zor Kazanma Oranı (%)"], label="Hard Win Rate", marker='s')
+plt.plot(df["Gün"], df["Zor Trend"], linestyle='--', label="Hard Trend")
+
+plt.title("Win Rate Trend Over Time")
+plt.xlabel("Day")
+plt.ylabel("Win Rate(%)")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+
+plt.savefig("../screenshot/trend_plot.png", dpi=300)
+plt.close()
