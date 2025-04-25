@@ -1,9 +1,11 @@
 # Sudoku Performance Analysis
+This project analyzes the performance of Sudoku games played by the user, focusing on completion time, win rates, and the difficulty levels. The goal is to understand how the player's win rate varies across different difficulty levels and over time, as well as the relationship between the time spent completing the puzzle and the win rate.
 
-## Project Proposal
-
-## Motivation  
-This project aims to analyze my Sudoku playing performance over time. By collecting daily game statistics, I will explore patterns in my playing efficiency, error rates, and winning streaks.
+## Project Objective
+The objective of this project is to:
+- Analyze the win rates and completion times for easy and hard Sudoku puzzles.
+- Investigate whether there is a correlation between time spent on a puzzle and the success rate.
+- Examine how win rates change over time.
 
 ## Data Source  
 - The data will be manually recorded from a Sudoku mobile application. Each day, data will be collected separately for **Easy and Hard** difficulty levels. The key metrics that will be tracked are:  
@@ -23,18 +25,16 @@ Data will be recorded daily in a **CSV file**. Below is the sample data:
 | 2025-03-11 | 5          | 85%           | 2                  | 3.0               | 4.8               | 4                   | 3          | 65%           | 1                  | 6.2               | 8.0               | 1                   |
 
 
-## Planned Analysis  
-- **Performance Trends**: Tracking how win rate and average completion time change over time.  
-- **Improvement Analysis**: Checking if my average completion time decreases.  
-- **Frequency vs. Performance**: Analyzing if playing more frequently leads to better performance.  
-- **Winning Streaks**: Identifying how often I maintain consecutive wins.  
-- **Difficulty Level Comparison**: Comparing performance between Easy and Hard games to evaluate the impact of difficulty level.  
+### Hypothesis 1 - Easy vs Hard Win Rate Comparison
 
-## Next Steps  
-- **Collect Data**: Record daily statistics separately for Easy and Hard levels.  
-- **Store Data**: Maintain a structured CSV file for consistency.  
-- **Clean & Process Data**: Ensure correct formatting and handle missing values.  
-- **Perform Exploratory Data Analysis (EDA)**: Use Python (`pandas`, `matplotlib`) to generate insights.  
-- **Compare Performance**: Analyze trends in win rates, completion times, and streaks.  
-- **Update Repository**: Regularly commit new data and analysis scripts to GitHub.  
-- **Summarize Findings**: Create reports or visualizations to showcase key insights.  
+To test whether there is a statistically significant difference in win rates between easy and hard Sudoku puzzles, an independent t-test was conducted.
+
+**H₀:** The mean win rates for easy and hard puzzles are equal.
+**H₁:** The mean win rates for easy and hard puzzles are different.
+
+### Visualization:
+
+**Bar Chart Comparing Easy vs Hard Win Rates:**
+
+![Win Rate Comparison](visualizations/screenshots/bar_chart.png)
+
