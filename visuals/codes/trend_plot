@@ -27,4 +27,6 @@ plt.ylabel("Win Rate(%)")
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
+plt.savefig("trend_plot.png", dpi=300)
+plt.show()
 
