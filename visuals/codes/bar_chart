@@ -2,10 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 df = pd.read_csv("../../data/sudoku_performance.csv")
+
+
 plt.figure(figsize=(10, 6))
 
-plt.bar(df["Tarih"], df["Kolay Kazanma Oranı (%)"], label="Easy Win Rate",alpha=0.7)
-plt.bar(df["Tarih"], df["Zor Kazanma Oranı (%)"], label="Hard Win Rate", alpha=0.7)
+plt.bar(df["Date"], df["Easy Win Rate (%)"], label="Easy Win Rate",alpha=0.7)
+plt.bar(df["Date"], df["Hard Win Rate (%)"], label="Hard Win Rate", alpha=0.7)
 
 plt.title("Easy vs Hard Win Rates")
 plt.xlabel("Date")
@@ -16,5 +18,3 @@ plt.tight_layout()
 
 plt.savefig("bar_chart.png", dpi=300)
 plt.show()
-
-
