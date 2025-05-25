@@ -10,13 +10,13 @@ def zamanduzelt(t):
     return dk+ sn / 60
 
 
-df["Kolay Süre"] = df["Kolay Ortalama Tamamlama Süresi (dakika)"].apply(zamanduzelt)
-df["Zor Süre"] = df["Zor Ortalama Tamamlama Süresi (dakika)"].apply(zamanduzelt)
+df["Easy Time"] = df["Kolay Ortalama Tamamlama Süresi (dakika)"].apply(zamanduzelt)
+df["Hard Time"] = df["Zor Ortalama Tamamlama Süresi (dakika)"].apply(zamanduzelt)
 
 
 plt.figure(figsize=(10, 6))
-plt.scatter(df["Kolay Süre"], df["Kolay Kazanma Oranı (%)"], label="Easy", alpha=0.7)
-plt.scatter(df["Zor Süre"], df["Zor Kazanma Oranı (%)"], label="Hard", alpha=0.7)
+plt.scatter(df["Easy Time"], df["Easy Win Rate (%)"], label="Easy", alpha=0.7)
+plt.scatter(df["Hard Time"], df["Hard Win Rate (%)"], label="Hard", alpha=0.7)
 
 
 plt.title("Completion Time vs Win Rate")
