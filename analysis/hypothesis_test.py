@@ -13,16 +13,17 @@ df["Kolay Süre"]= df["Kolay Ortalama Tamamlama Süresi (dakika)"].apply(zamandu
 df["Zor Süre"] = df["Zor Ortalama Tamamlama Süresi (dakika)"].apply(time_to_float)
 
 #hypothesis 1--- comp. of easy and hard rates
-easywrates= df["Kolay Kazanma Oranı (%)"]
-hardwrates=df["Zor Kazanma Oranı (%)"]
+easywrates= df["Easy Win Rate (%)"]
+hardwrates=df["Hard Win Rate (%)"]
 
 #t-test
 t_num, p_value = ttest_ind(easywrates, hardwrates, equal_var=False)
 
 print("Hypothesis 1 - Easy vs Hard Win Rate Comparison")
 print("t statistic: " + str(round(t_num, 3)))
-print("p-value: " + str(round(p_value,5)))
+print("p-value: " + str(round(p_value,3)))
 
+#results
 if p_value<0.05:
   print("Conclusion: There is a statistically significant difference between the win rates (reject H0).")
 else:
@@ -30,9 +31,15 @@ else:
 
 
 #hypothesis 2--- win rates over time
+# Tarihi datetime formatına çevir
+df["Date"] = pd.to_datetime(df["Date"])
 
-slope_easy, intercept_easy, r_value_easy,p_value_easy, std_err_easy = linregress(df["Gün"], df["Kolay Kazanma Oranı (%)"])
-slope_hard,intercept_hard, r_value_hard,p_value_hard, std_err_hard= linregress(df["Gün"], df["Zor Kazanma Oranı (%)"])
+# Gün cinsinden indeks oluştur
+df["DayIndex"] = (df["Date"] - df["Date"].min()).dt.days
+
+# regression
+slope_easy, intercept_easy, r_value_easy, p_value_easy, std_err_easy = linregress(df["DayIndex"], df["Easy Win Rate (%)"])
+slope_hard, intercept_hard, r_value_hard, p_value_hard, std_err_hard = linregress(df["DayIndex"], df["Hard Win Rate (%)"])
 
 print("\nHypothesis 2 - Trend Analysis of Win Rates Over Time")
 
@@ -50,8 +57,8 @@ else:
 
 #hypothesis 3----- corr. between average time and win rate
 
-corr_easy, p_easy = pearsonr(df["Kolay Süre"], df["Kolay Kazanma Oranı (%)"])
-corr_hard, p_hard = pearsonr(df["Zor Süre"], df["Zor Kazanma Oranı (%)"])
+corr_easy, p_easy = pearsonr(df["Easy Time"], df["Easy Win Rate (%)"])
+corr_hard, p_hard = pearsonr(df["Hard Time"], df["Hard Win Rate (%)"])
 
 print("\nHypothesis 3 - Correlation Between Completion Time and Win Rate")
 
